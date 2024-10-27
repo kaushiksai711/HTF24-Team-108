@@ -3,7 +3,7 @@ import { Book, Award, MessageCircle, Calendar, Clock, Bookmark, TrendingUp, Flag
 import React from "react";
 import { auth ,signOut,db} from "../firebaseConfig";
 import { useNavigate } from "react-router-dom";
-
+import TranslationApp from './TranslationApp';
 const Dashboard = () => {
   const navigate = useNavigate();
 
@@ -24,6 +24,7 @@ const Dashboard = () => {
         alt="User profile"
         style={{ borderRadius: "50%", margin: "20px", width: "100px" }}
       />
+      <TranslationApp/>
       <button onClick={handleSignOut} style={{ padding: "10px 20px" }}>
         Sign Out
       </button>

@@ -1,0 +1,14 @@
+.app {
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    display: flex;
+  }
+  
+  .main {
+    flex-grow: 1;
+    background-color: #eef3fa;
+    padding: 20px;
+  }
+  

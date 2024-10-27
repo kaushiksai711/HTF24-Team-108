@@ -1,0 +1,44 @@
+.sidebar {
+    width: 200px;
+    background-color: #cfe2f3;
+    padding: 20px;
+  }
+  
+  .create-btn, .menu-btn-top,.menu-btn-bottom {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .create-btn{
+    border-radius: 50px;
+  }
+
+  .create-btn:hover{
+    transform: scale(1.01);
+  }
+
+  .menu-btn-top{
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #6495ED;
+  }
+
+  .menu-btn-top:hover{
+    transform: scale(1.01);
+  }
+
+  .menu-btn-bottom{
+    background-color: transparent;
+    font-size: large;
+  }
+  
+  .menu-btn-bottom:hover{
+    transform: scale(1.01);
+  }
