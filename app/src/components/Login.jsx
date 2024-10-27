@@ -10,7 +10,8 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log("User:", result.user);
-      navigate("/dashboard");
+      auth.currentUser=result.user;
+      navigate("/user-profile");
     } catch (error) {
       console.error("Error signing in:", error);
     }

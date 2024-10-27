@@ -1,19 +1,45 @@
 // src/firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+import { getAuth, GoogleAuthProvider,signInWithPopup,signOut } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"; // Optional: Firestore support
 
-const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_APP_ID,
-    measurementId: "G-M553ZL8Q9S"
-  };
+// Firebase configuration using environment variables
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+};
 
-// Initialize Firebase
+// Initialize Firebase and its services
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const db = getFirestore(app); // Firestore instance (optional)
 
-export { auth, provider, signInWithPopup, signOut };
+export { app, auth, provider,signInWithPopup, signOut,db };
+
+
+
+// // src/firebaseConfig.js
+// import { initializeApp } from "firebase/app";
+// import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
+
+// const firebaseConfig = {apiKey: process.env.REACT_APP_API_KEY,
+//     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+//     projectId: process.env.REACT_APP_PROJECT_ID,
+//     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+//     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+//     appId: process.env.REACT_APP_APP_ID,
+//     measurementId: "G-M553ZL8Q9S"
+//   };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+// const provider = new GoogleAuthProvider();
+
+// export { auth, provider, signInWithPopup, signOut };
