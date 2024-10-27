@@ -187,11 +187,7 @@ function Forum() {
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
       <header className='header1'>
         <h1>Discussion Forum</h1>
-        {user ? (
-          <button onClick={signOut}>Sign Out</button>
-        ) : (
-          <button onClick={signInWithPopup}>Sign In with Google</button>
-        )}
+        
       </header>
 
       {user ? (

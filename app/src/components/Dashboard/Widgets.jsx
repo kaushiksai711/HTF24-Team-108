@@ -13,7 +13,7 @@ const Widgets = () => {
       <div className="widget-item">Dictionary</div>
     </div>
     <br/>
-    <div className="my-progress" ><i class="bi bi-journal-text"></i>MyProgress</div>
+    <div className="my-progress" onClick={()=>navigate('/Progress')} ><i class="bi bi-journal-text"></i>MyProgress</div>
     </>
   );
 };

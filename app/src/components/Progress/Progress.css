@@ -1,0 +1,59 @@
+/* LevelMap.css */
+.map-container {
+    width: 100%;
+    height: 600px; /* Adjust height based on your needs */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    background-color: #ffe5b4; /* Background color */
+    position: relative;
+  }
+  
+  .path {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between nodes */
+    padding-top: 20px;
+    position: relative;
+  }
+  
+  .level-node {
+    width: 60px;
+    height: 60px;
+    background-color: #ff7f50; /* Level circle color */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circle shape */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .level-node:hover {
+    transform: scale(1.1);
+  }
+  
+  .level-node::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: #ff7f50;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .level-node:first-child::after {
+    display: none; /* Hide line for the first node */
+  }
+  
+  /* Decorative curved path background (optional) */
+  
